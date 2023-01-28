@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+.green-scheme {
+    --first-gradient: #3dff74c1;
+    --second-gradient: #5bfe89c1;
+    --third-gradient: #7fffa3c1;
+    --main: #01d43d;
+}
+
+.blue-scheme {
+    --first-gradient: #1084ffdf;
+    --second-gradient: #3b98fcdf;
+    --third-gradient: #61adffdf;
+    --main: #177bff;
+}
+
+.yellow-scheme {
+    --first-gradient: #dcfe56c7;
+    --second-gradient: #edfd8ac7;
+    --third-gradient: #f6ffbdc7;
+    --main: #ffd505;
+}
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -29,16 +50,16 @@
     height: 100vh;
     position: relative;
     background: linear-gradient(to left, 
-        #3dff74c1,
-        #5bfe89c1,
-        #7fffa3c1
-        );
+        var(--first-gradient),
+        var(--second-gradient),
+        var(--third-gradient)
+    );
 }
 
 
-#outer-container .circle {
+#outer-container #circle {
     position: absolute;
-    background-color: #01d43d;
+    background-color: var(--main);
     width: 500px;
     height: 500px;
     border-radius: 100%;
@@ -51,7 +72,8 @@
     /* animation: rotate 3s ease-in-out infinite; */
 }
 
-#outer-container .snowfall-container {
+/* ==========Background Animation CSS========== */
+#outer-container .animation-container {
     position: absolute;
     right: 0;
     /* background-color: red; */
@@ -59,10 +81,10 @@
     width: 81vw;
 }
 
-#outer-container .snowfall-container div {
+#outer-container .animation-container .ball {
     width: 30px;
     height: 30px;
-    background-color:rgb(7, 213, 65);
+    background-color: var(--main);
     border-radius: 100%;
     position: absolute;
     filter: blur(0.5rem);
@@ -70,77 +92,93 @@
     opacity: 0;
 }
 
-#outer-container .snowfall-container div:nth-child(1) {
+/* =========== Giving Each ball a position =========== */
+#outer-container .animation-container .ball:nth-child(1) {
     top: 400px;
     left: 200px;
     animation-delay: 0.3s;
 }
 
-#outer-container .snowfall-container div:nth-child(2) {
+#outer-container .animation-container .ball:nth-child(2) {
     top: 200px;
     left: 400px;
     animation-delay: 0.5s;
     animation-duration: 8s;
 }
 
-#outer-container .snowfall-container div:nth-child(3) {
+#outer-container .animation-container .ball:nth-child(3) {
     top: 600px;
     left: 800px;
     animation-delay: 0.3s;
     animation-duration: 10s;
 }
 
-#outer-container .snowfall-container div:nth-child(4) {
+#outer-container .animation-container .ball:nth-child(4) {
     top: 300px;
     left: 1000px;
     animation-delay: 0.7s;
     animation-duration: 7s;
 }
 
-#outer-container .snowfall-container div:nth-child(5) {
+#outer-container .animation-container .ball:nth-child(5) {
     top: 350px;
     left: 600px;
     animation-delay: 0.8s;
     animation-duration: 9s;
 }
 
-#outer-container .snowfall-container div:nth-child(6) {
+#outer-container .animation-container .ball:nth-child(6) {
     top: 500px;
     animation-delay: 0.4s;
     animation-duration: 7s;
 }
 
-#outer-container .snowfall-container div:nth-child(7) {
+#outer-container .animation-container .ball:nth-child(7) {
     top: 450px;
     left: 1100px;
     animation-delay: 0.9s;
     animation-duration: 7s;
 }
 
-#outer-container .snowfall-container div:nth-child(8) {
+#outer-container .animation-container .ball:nth-child(8) {
     top: 250px;
     left: 800px;
     animation-delay: 0.7s;
     animation-duration: 10s;
 }
 
-#outer-container .snowfall-container div:nth-child(9) {
+#outer-container .animation-container .ball:nth-child(9) {
     top: 550px;
     left: 450px;
     animation-delay: 0.9s;
     animation-duration: 6s;
 }
 
-#outer-container .snowfall-container div:nth-child(10) {
+#outer-container .animation-container .ball:nth-child(10) {
     top: 650px;
     left: 300px;
     animation-delay: 0.6s;
     animation-duration: 9s;
 }
 
-#outer-container .snowfall-container div:nth-child(11) {
+#outer-container .animation-container .ball:nth-child(11) {
     top: 700px;
     left: 1000px;
     animation-delay: 0.5s;
     animation-duration: 10s;
+}
+
+/* =========== Slider Button =========== */
+#outer-container #btn {
+    position: absolute;
+    top: 400px;
+    right: 50px;
+    background-color: var(--main);
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 0 5px #000;
+    cursor: pointer;
 }
