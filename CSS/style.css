@@ -61,11 +61,11 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
-#outer-container #circle {
+#outer-container #shape {
     position: absolute;
     background-color: var(--main);
     width: 500px;
@@ -77,6 +77,32 @@
     left: -220px;
     border: 10px solid var(--third-gradient);
     transition: all 1s;
+}
+
+#outer-container #shape #image {
+    position: absolute;
+    filter: drop-shadow(2px 2px 5px #000);
+}
+
+.java-image {
+    width: 200px;
+    height: 200px;
+    right: -70px;
+    top: 90px;
+}
+
+.cpp-image {
+    width: 150px;
+    height: 150px;
+    right: -45px;
+    top: 125px;
+}
+
+.python-image {
+    width: 226px;
+    height: 150px;
+    right: -105px;
+    top: 130px;
 }
 
 /* ==========Inner Container for displaying the text and tying animation============= */
@@ -117,7 +143,7 @@
     height: 100%;
     background-color: #fff;
     border-left: 3px solid;
-    animation: typing 2s linear alternate infinite backwards;
+    animation: typing 2s linear alternate infinite;
 }
 
 #outer-container .inner-container .buttons .inner-btn {
