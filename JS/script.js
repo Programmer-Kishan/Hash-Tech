@@ -1,3 +1,5 @@
+// Navbar elements
+const navTitle = document.getElementById('nav-title');
 
 // main container elements
 const backgroundContainer = document.getElementById('outer-container');
@@ -42,6 +44,9 @@ btn.addEventListener('click', () => {
     setTimeout(() => {
         rotateShape.classList.remove('rotate-animation');
     }, 2000)
+
+    // for changing the navbar title
+    navTitle.innerHTML = title_list[ctr%3].title;
 
     // for title of the main page
     main_title.innerHTML = title_list[ctr%3].title;

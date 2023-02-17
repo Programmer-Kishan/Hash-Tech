@@ -10,7 +10,7 @@
     --first-gradient: #3dff74c1;
     --second-gradient: #5bfe89c1;
     --third-gradient: #7fffa3c1;
-    --main: #01d43d;
+    --main: #00b232;
 }
 
 .blue-scheme {
@@ -24,7 +24,7 @@
     --first-gradient: #dcfe56c7;
     --second-gradient: #edfd8ac7;
     --third-gradient: #f6ffbdc7;
-    --main: #ffd505;
+    --main: #f1cd18;
 }
 
 @keyframes rotate {
@@ -104,6 +104,50 @@
     overflow: hidden;
 }
 
+/* ===================== Navbar ========================= */
+
+#outer-container nav {
+    width: 100%;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #e2e0e07e;
+    z-index: 10000;
+}
+
+#outer-container nav #nav-title {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0 0 0 10px;
+    color: var(--main);
+}
+
+#outer-container nav .nav-list {
+    width: 30%;
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    color:#9d9d9d;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#outer-container nav .nav-list .nav-item {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#outer-container nav .nav-list .nav-item:hover{
+    text-shadow: .5px .5px 1.3px #adadad;
+    transform: scale(1.1);
+}
+
+/* =================== Shape ==================== */
 
 #outer-container #shape {
     position: absolute;
@@ -150,12 +194,10 @@
     width: 35%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    /* border: 2px solid; */
     padding: 20px;
-    z-index: 1000;
 }
 
 #outer-container .inner-container h4 {
