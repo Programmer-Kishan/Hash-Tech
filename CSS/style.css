@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+.light-mode {
+    background-color: #fff;
+}
+
+.dark-mode {
+    background-color: #000;
+}
+
 .green-scheme {
     --first-gradient: #3dff74c1;
     --second-gradient: #5bfe89c1;
@@ -198,6 +206,7 @@
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     padding: 20px;
+    z-index: 10000;
 }
 
 #outer-container .inner-container h4 {
@@ -219,13 +228,13 @@
 #outer-container .inner-container #inner-title::after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -40px;
     bottom: 0;
-    width: 101%;
+    width: 130%;
     height: 100%;
     background-color: #fff;
     border-left: 3px solid;
-    animation: typing 2s linear alternate infinite;
+    animation: typing 1.7s linear alternate infinite;
 }
 
 #outer-container .inner-container .buttons .inner-btn {
